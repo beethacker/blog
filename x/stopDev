@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+kill (pgrep hugo); pgrep hugo;

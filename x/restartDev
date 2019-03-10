@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+x/stopDev
+hugo server -D -d dev &
