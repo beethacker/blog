@@ -1,0 +1,143 @@
+<meta name="title" content="Configuring my Ergodox Using Python"/>
+<meta name="create_time" content="2015/07/24"/> 
+<meta name="tags" content="ergodox"/>
+<meta name="description" content="Configuring my ergodox was really awkward, so now I generate the C code with Python!"/>
+<p>
+Setting up the build for the ergodox firmware went pretty smoothly. I couldn't get the Teensy loader application to work with my ergodox on
+linux, but on windows everything went smoothly. The online configurator tool didn't quite suit my needs. I wanted to add keys that were
+CTRL+key, SHIFT+key, and so on, which weren't supported with massdrop's tool
+</p>
+<p>
+Modifying the code for the layout in C was ugly and error prone. The layout is specified in a few large static arrays. Specifying behaviour
+for key down and key up, and associating data (which key code), are specified in three different arrays, quite far apart.
+</p> 
+
+<pre><code class="language-c">
+// LAYOUT --------------------------------------
+const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
+// LAYER 0 -  
+KB_MATRIX_LAYER(
+    // unused
+    0,
+    // left hand
+               0,          _1,          _2,           3,          _4,          _5,           0,
+            _tab,          _Q,          _W,          _F,          _P,          _G,     _arrowL,
+          _ctrlL,          _A,          _R,          _S,          _T,          _D,
+         _shiftL,         _bs,          _X,          _C,          _V,          _B,           3,
+           _guiL,       _altL,           2,       _altL,        _esc,
+    // thumb 
+                          _F8,         _F7,
+               0,           0,         _F8,
+               1,       _altL,         _F9,
+    
+    // right hand
+               0,          _6,          _7,          _8,          _9,          _0,           4,
+              _Z,          _J,          _L,          _U,          _Y,          _Z,   _capsLock,
+                           _H,          _N,          _E,          _I,          _O,      _ctrlR,
+               1,          _K,          _M,      _comma,     _period,      _slash,     _shiftR,
+          _enter,       _altR,           0,       _altL,     _shiftL,
+    // thumb
+            _F10,         _F6,
+             _F2,           0,           0,
+           _altL,           2,      _space
+),
+// LAYER 1 -  
+KB_MATRIX_LAYER(
+    // unused
+    0,
+    // left hand
+               0,         _F1,         _F2,         _F3,         _F4,         _F5,           0,
+               0,          _6,          _5,      _slash,  _backslash,  _backslash,           0,
+          _enter,       _dash,      _equal,          _8,      _equal,      _grave,
+               0,         _bs,      _comma,     _period,          _7,          _3,           0,
+               0,           0,           0,           0,           0,
+    // thumb 
+                            7,           0,
+               0,           0,           0,
+               0,           0,           0,
+    
+    // right hand
+               0,         _F6,         _F7,         _F8,         _F9,        _F10,           0,
+    MEDIAKEY_AUDIO_VOL_UP,      _grave,          _2,   _bracketL,   _bracketR,  _semicolon,           0,
+                       _quote,      _quote,          _9,          _0,  _semicolon,           0,
+    MEDIAKEY_AUDIO_VOL_DOWN,       _dash,          _1,   _bracketL,   _bracketR,      _slash,           0,
+          _enter,           0,           0,           0,           0,
+    // thumb
+               0,           0,
+               0,           0,           0,
+               0,           2,      _space
+),
+</code></pre>
+Since ten layers are supported by the ergodox, these arrays are <b>really</b> long! In fact, we don't specify key down functions until about 200 lines later!
+<pre><code class="language-c">
+// PRESS ------------------------------------------
+const void_funptr_t PROGMEM _kb_layout_press[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
+// LAYER 0 -  
+KB_MATRIX_LAYER(
+    // unused
+    0,
+    // left hand
+        lpop,  kprrel,  kprrel,  lpush3,  kprrel,  kprrel,  dbtldr,
+      kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel, ctrlalt,
+      kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,
+      kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  lpush3,
+      kprrel, ctlprre,  lpush2,  kprrel,  kprrel,
+    // thumb 
+               kprrel, sshprre,
+        NULL,    NULL, sshprre,
+      lpush1,  kprrel,  kprrel,
+    
+    // right hand
+      dbtldr,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  lpush4,
+     ctlprre,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,
+               kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,
+      lpush1,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,  kprrel,
+      kprrel,  kprrel,    NULL, ctlprre, ctlprre,
+    // thumb
+     sshprre, sshprre,
+     ctlprre,    NULL,    NULL,
+     sshprre,  lpush2,  kprrel
+),
+// LAYER 1 -  
+KB_MATRIX_LAYER(
+    // unused
+    0,
+</code></pre>
+<p>
+Again, corresponding key up functions are specified in a third array hundreds of lines later. This makes updating it very tedious. Sometimes I would get the key down and key up functions in the wrong place, leading to strange bugs where shift or control would stay held down for future keys or for the wrong keys.
+</p>
+<p>I'm not familiar with Arduino and Teensy, so I was a little thrown by the PROGMEM declaration. This declares that the variable should be stored in flash memory rather than SRAM. 
+</p>
+<p>
+Having been terrified that I'd bricked my ergodox once, I didn't want to mess too much with the firmware and how the keys get written into flash memory, and preferred to leave them as statically initialized arrays.
+</p>
+<p>
+Instead, I wrote a python utility which would generate this C code for the layout. I create a number of layouts which store "keys". Each key struct knows about its data and key up/down funtcions.
+</p>
+<pre><code class="language-python">
+def navLayer():
+   left = HalfLayer(TRANSPARENT_KEY)
+   left.num_row = [NULL_KEY, NULL_KEY, KeyDef("_B", WITH_CTRL), NULL_KEY, NULL_KEY]
+   left.letter_up = [KeyDef("_Q", WITH_ALT), HOME, UP, END, KeyDef("_W", WITH_ALT)]
+   left.letter_home = [LCONTROL, LEFT, DOWN, RIGHT, KeyDef("_W", WITH_CTRL)]
+   left.letter_down = [BACKSPACE, CUT, COPY, PASTE, PAGE_DOWN]
+   left.outer = [CLEAR_LAYERS, TAB, pop_layer(2), toggle_layer(ALPHA_LAYER)]
+   left.thumb_small[0] = pop_layer(2)
+   left.thumb_small[3] = toggle_layer(ALPHA_LAYER)
+   left.inner[0] = pop_layer(2)
+   left.inner[1] = TRANSPARENT_KEY
+
+   right = HalfLayer(TRANSPARENT_KEY)
+   right.letter_up = [NULL_KEY, CUT, COPY, PASTE, NULL_KEY]
+   right.letter_home = [UNDO, RSHIFT, RCONTROL, RALT, BACKSPACE]
+   #right.letter_down[4] = pop_layer(2)
+   right.inner[0] = KeyDef("_F11", WITH_CTRL)
+   right.inner[1] = KeyDef("_F11", SHIFTED)
+   right.thumb_small[3] = toggle_layer(ALPHA_LAYER)
+   right.thumb_2 = toggle_layer(NAV_LAYER)
+
+   return FullLayer(left, right)
+</code></pre>
+<p>
+Awwww, so much better! Now I can update keys in <b>one</b> place, and it's clear <b><i>where</i></b> in the layout the key lives!
+</p>

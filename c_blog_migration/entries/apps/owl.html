@@ -1,0 +1,62 @@
+<meta name="title" content="New Ear Training Regime"/>
+<meta name="description" content="I wrote a program to generate flash cards for ear training, and so far it's working out great!"/>
+<meta name="tags" content="Music MusicProgramming"/>
+<meta name="create_time" content="2016/04/29"/>
+
+<p>At the beginning of the year, I had a really bad ear. I found it difficult if not impossible to learn to play things by ear. Any ear training that I'd ever attempted felt difficult or fruitless. Now, I've written software to generate music flash cards for myself, which I've dubbed 'Owl', and have embarked on a new ear training regime. So far it feels incredibly enjoyable and productive! </p>
+
+<h2> Motivation </h2>
+
+<p> When learning a language one school of thought is to, rather than relying on learning list of grammar rules, is to just learn <b>a lot</b> of <a href="http://www.antimoon.com/how/input-intro.htm">sentences.</a>  On the order of 10,000 sentences or so, perhaps! At that point, you, hopefully, will naturally become accustomed to the rules, as well as any subtleties and exceptions. Instead of learning vocabulary in isolation and putting them together with rules, you always get to see words in context! </p>
+
+<p>This kind of approach encourages watching movies or reading books, in other words, consuming real media in the target language. That's a great way to mine for fun and exciting sentences. Enjoyable content should also help keep motivation levels up over comparatively boring grammar rules. That said, I feel like I nerd out a LOT about grammar rules. They're really my favourite part. </p>
+
+<p>Ear training has some similarities. A lot of basic ear training apps kicking around on the web will do things like: play an interval, and quiz you on it. This is a little boring and tedious. I've tried to put time into practicing these, but I've never had any results to show for it. </p>
+
+<p>Software provided <a href="http://www.miles.be/articles/28-contextual-ear-training">here</a>, is a somewhat better solution. It criticizes the common approach of just listening to intervals a bunch. Instead, it opts to play some chords for context, and asks you where that note fits into a scale. </p>
+
+<p>One important thing to note is, the goal isn't <b>really</b> to be able to tell every interval between every pair of notes in a piece of music. What I want is to be able to listen to something, and then be able to work out how to play it! I want to be able to transcribe and arrange things that I hear. Instead of listening to intervals, what I really need to do is just <b>practice transcribing music!</b> </p>
+
+<p>
+	<i>Practice the actual skill you want to get better at!</i>
+</p>
+
+<p>The problem though, is that transcribing music is very difficult. It's <u><b>so</b></u> hard, and I feel <u><b>so</b></u> hopeless, that it's a very daunting thing to practice. I remember a handful of times, struggling to try to learn to play something by ear, and just not getting it. I also remember failing miserably trying to play Mary Had a Little Lamb by ear at a cello lesson. This does not come easily to me. </p>
+
+<p>The solution, is to provide an easy progression of excercises! I need to make things as easy and engaging as possible! </p>
+
+<h2>The New Flash Card Regime </h2>
+
+<p> I've been using Anki a lot lately for languages, so I thought it would be best to create flash cards in that format. Each flash card ranges from a single bar of an ear training exercise to a couple of bars of a simple melody. Each day, I sit at Jess's piano and run through the current cards in my Anki deck. I listen, and try to play it back. For difficult ones, I bang away on the piano as I listen, desperately trying to match up each note. It's very satisfying when I get them.</p>
+
+<p>Only a couple weeks into doing this I caught myself humming something and thought, wait! I can do this now! I ran to the piano and managed to work out what I was humming! </p>
+
+<p>The other side, is generating content. Once or twice a week, I take a few minutes to copy over simple melodies from a site singing book into my software, then export them to anki. Owl currently looks like garbage, but it's getting the job done. </p>
+
+<?php echo img("htdocs/img/owl1.png"); ?>
+
+<p>Once I enter notes, it generates png and ogg files, and appends an entry to a csv file which I can import into anki. When I'm ready to import, all of the ogg and png files get copied over into Anki's media folder. Some of this morning's new flash cards: </p>
+
+<p>
+	<img src="$/img/trumpet_flashcard_example.png"/><br/>
+	<audio controls>
+	  <source src="$/audio/trumpet_flashcard_example.ogg" type="audio/ogg">
+	Your browser does not support the audio element.
+	</audio><br/>
+</p>
+
+<p>
+	<img src="$/img/bassoon_flashcard_example.png"/><br/>
+	<audio controls>
+	  <source src="$/audio/bassoon_flashcard_example.ogg" type="audio/ogg">
+	Your browser does not support the audio element.
+	</audio><br/>
+</p>
+
+
+<p>I briefly had a similar setup years ago - Ruby scripts that would take text descriptions of notes, run them through CSound to generate WAV files, and then create Anki flash cards for me. This was a fine set up! It would have been great! I think where it fell flat was that I was trying to do these entirely by ear <b>on the bus</b> without a piano to sit in front of for help. It was still too difficult of a problem for me at the time. </p>
+
+
+
+
+

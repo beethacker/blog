@@ -1,0 +1,10 @@
+<meta name="title" content="How Does This Work Again?"/>
+<meta name="description" content="I completely forget how this blog works!"/>
+<meta name="tags" content="blog web"/>
+<meta name="create_time" content="2016/10/13"/>
+
+<p> I haven't written anything for this blog in a while, so I forget how it was working. Maybe I should further document my process! It occurs to me that I have a few posts about this blog, but nothing seriously describing what it is or how it works! I also forget my password. </p>
+
+<p> Entries are written in HTML with a few meta tags at the top. These can then be FTP'd to the server. From an admin page, I can run some php scripts which read the HTML posts from directories, and they're translated pretty minimally into blog posts. A DB record notes the title, description, tags, and  time stamp, from the meta data as well as which .html file it corresponds to. </p>
+
+<p>One thing I remember being dissatisfied with was adding images to posts. I ended up generating the &ltimg> tag with a helper function in Code Igniter. It certainly feels more natural to just use a regular old &ltimg> tag directly. I think I struggled to get that working consistently on both on my local server and on the hosted server. That might have been before moving the images out to a htdocs folder and fixing up the .htaccess. Looking at it briefly today, &ltimg src="../htdocs/whatever.png"> works fine.</p>
