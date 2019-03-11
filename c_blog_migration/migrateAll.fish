@@ -6,4 +6,6 @@ for entryPath in (find entries -type f)
   mkdir -p $newDir
   ./migrate.rb $entryPath > $newPath 
 end
+cp -r output/* ../content/posts
+
 
