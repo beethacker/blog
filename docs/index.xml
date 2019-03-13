@@ -2,112 +2,112 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brodie Blog</title>
-    <link>brodie.cookwithchef.com/</link>
+    <link>http://brodie.cookwithchef.com/</link>
     <description>Recent content on Brodie Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="brodie.cookwithchef.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://brodie.cookwithchef.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Blog 2018</title>
-      <link>brodie.cookwithchef.com/posts/blog/blog_2018/</link>
+      <link>http://brodie.cookwithchef.com/posts/blog/blog_2018/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/blog/blog_2018/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/blog/blog_2018/</guid>
       <description>This week I&#39;ve been working on yet another new blog. It feels a little silly, since I never manage to keep up with writing entries, but maybe this time will be different. It&#39;s also a very small enjoyable project that I can finish and cross off the list. The current version feels pretty similar to last time, but the trick is that this time I&#39;m statically generating the pages offline in C++.</description>
     </item>
     
     <item>
       <title>Productivity Streak</title>
-      <link>brodie.cookwithchef.com/posts/apps/projects_feb_2018/</link>
+      <link>http://brodie.cookwithchef.com/posts/apps/projects_feb_2018/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/apps/projects_feb_2018/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/apps/projects_feb_2018/</guid>
       <description>finished a bunch of tiny projects!&#34;/	I seem to be getting a whole lot done lately. I have a new blog system set up, and I&#39;ve made a few silly websites for Lauralee. I&#39;ve been playing with Android Studio and Unity! I&#39;ve also gotten in the routine of reading and doing yoga! Silly Websites  Webcomic Bubblegum Machine I made a website that dispenses comics for Lauralee.</description>
     </item>
     
     <item>
       <title>Thoughts on the PEI Electoral Reform Plebiscite</title>
-      <link>brodie.cookwithchef.com/posts/pei_plebiscite/</link>
+      <link>http://brodie.cookwithchef.com/posts/pei_plebiscite/</link>
       <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/pei_plebiscite/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/pei_plebiscite/</guid>
       <description>In the recent PEI plebiscite MMP was selected as the &#34;winner&#34; using an alternative vote. First Past the Post received the most first choice votes, so in some sense (plurality), it&#39;s the &#34;winner&#34;. That&#39;s clearly an unfair system, but the alternative vote, which chose MMP, isn&#39;t necessarily a fair system either! The total number of votes for MMP and DMP combined - votes for a proportional system - clearly beat FPTP.</description>
     </item>
     
     <item>
       <title>How Does This Work Again?</title>
-      <link>brodie.cookwithchef.com/posts/blog/forget/</link>
+      <link>http://brodie.cookwithchef.com/posts/blog/forget/</link>
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/blog/forget/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/blog/forget/</guid>
       <description>I haven&#39;t written anything for this blog in a while, so I forget how it was working. Maybe I should further document my process! It occurs to me that I have a few posts about this blog, but nothing seriously describing what it is or how it works! I also forget my password.  Entries are written in HTML with a few meta tags at the top. These can then be FTP&#39;d to the server.</description>
     </item>
     
     <item>
       <title>New Ear Training Regime</title>
-      <link>brodie.cookwithchef.com/posts/apps/owl/</link>
+      <link>http://brodie.cookwithchef.com/posts/apps/owl/</link>
       <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/apps/owl/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/apps/owl/</guid>
       <description>At the beginning of the year, I had a really bad ear. I found it difficult if not impossible to learn to play things by ear. Any ear training that I&#39;d ever attempted felt difficult or fruitless. Now, I&#39;ve written software to generate music flash cards for myself, which I&#39;ve dubbed &#39;Owl&#39;, and have embarked on a new ear training regime. So far it feels incredibly enjoyable and productive!  Motivation  When learning a language one school of thought is to, rather than relying on learning list of grammar rules, is to just learn a lot of sentences.</description>
     </item>
     
     <item>
       <title>No Markdown!</title>
-      <link>brodie.cookwithchef.com/posts/blog/no_markdown/</link>
+      <link>http://brodie.cookwithchef.com/posts/blog/no_markdown/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/blog/no_markdown/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/blog/no_markdown/</guid>
       <description>Yesterday, I decided that it would be really nice if I could edit my posts in markdown. There are definitely some easy to find php libraries for parsing markdown, so I didn&#39;t think it would be too much work. This morning, however, integrating a library in seemed like it was going to be just a little too much busy work.
 Instead, how good is sublime at editing HTML? I installed the Emmet plug in, which does some pretty cool stuff, but it&#39;s overkill.</description>
     </item>
     
     <item>
       <title>Ergodox Navigation Layer</title>
-      <link>brodie.cookwithchef.com/posts/ergodox/navigation/</link>
+      <link>http://brodie.cookwithchef.com/posts/ergodox/navigation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/ergodox/navigation/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/ergodox/navigation/</guid>
       <description>When I decided on the ergodox, it was mostly because I wanted a split keyboard that didn&#39;t have staggered rows. The fact that it was entirely programmable wasa neat perk. Before the ergodox came, I spent a lot of time thinking about how I wanted to lay out the keys. I&#39;ve done a lot of things that make sense to me, which I haven&#39;t seen in any other layouts that I&#39;ve come across.</description>
     </item>
     
     <item>
       <title>Configuring my Ergodox Using Python</title>
-      <link>brodie.cookwithchef.com/posts/ergodox/python_config/</link>
+      <link>http://brodie.cookwithchef.com/posts/ergodox/python_config/</link>
       <pubDate>Fri, 24 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/ergodox/python_config/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/ergodox/python_config/</guid>
       <description>Setting up the build for the ergodox firmware went pretty smoothly. I couldn&#39;t get the Teensy loader application to work with my ergodox onlinux, but on windows everything went smoothly. The online configurator tool didn&#39;t quite suit my needs. I wanted to add keys that wereCTRL+key, SHIFT+key, and so on, which weren&#39;t supported with massdrop&#39;s toolModifying the code for the layout in C was ugly and error prone.</description>
     </item>
     
     <item>
       <title>The Slippery Slope to Ergonomics</title>
-      <link>brodie.cookwithchef.com/posts/ergodox/getting_an_ergodox/</link>
+      <link>http://brodie.cookwithchef.com/posts/ergodox/getting_an_ergodox/</link>
       <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/ergodox/getting_an_ergodox/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/ergodox/getting_an_ergodox/</guid>
       <description>A couple of months ago, I decided that I would consider buying an ergonomic keyboard. The next week, I noticed a Facebook post about a synth instrument on Kickstarter. This got me to thinking about using regular computer keyboards for playing synth. It&#39;s certainly never been a satisfying experience any time that I&#39;ve tried it. Though,what if a keyboard didn&#39;t have staggered rows? What if the keys were all layed out in a grid?</description>
     </item>
     
     <item>
       <title>Korean</title>
-      <link>brodie.cookwithchef.com/posts/korean/</link>
+      <link>http://brodie.cookwithchef.com/posts/korean/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/korean/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/korean/</guid>
       <description>Lauralee would like to go on a trip to Seoul sometime, and I was at Freeman&#39;s with Jess and Craig, and they were talking about a trip to visit Kyle sometime. I decided to start learning a bit of Korean now, and see how functional I can get it by then.I&#39;ve been at it for about a month now, and so far I feel like it&#39;s been my most efficient language learning venture so far!</description>
     </item>
     
     <item>
       <title>New Blog(s)</title>
-      <link>brodie.cookwithchef.com/posts/new_blog/</link>
+      <link>http://brodie.cookwithchef.com/posts/new_blog/</link>
       <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>brodie.cookwithchef.com/posts/new_blog/</guid>
+      <guid>http://brodie.cookwithchef.com/posts/new_blog/</guid>
       <description>It&#39;s that time again. Every so often, I feel like I should keep a blog; sometimes I actually do it! A few times I&#39;ve had word press set up, and other times I&#39;ve hobbled things together myself. It&#39;s just nice to feel like I have a place where I can dump random things. The main CookWithChef  page is now going to be a house Word Press blog. The old cook with chef site has moved to chef.</description>
     </item>
     

@@ -1,4 +1,4 @@
-baseurl = "brodie.cookwithchef.com"
+baseurl = "http://brodie.cookwithchef.com"
 languageCode = "en-us"
 theme = "brodietime"
 paginate = 5
