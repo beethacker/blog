@@ -1,0 +1,11 @@
+#!/usr/bin/fish
+
+hugo -d docs
+git add .
+if [ -z $argv[1] ]
+  git commit -m "Rebuild blog site"
+else
+  git commit -m $argv[1]
+end
+git push
+

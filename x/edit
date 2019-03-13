@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+vim content/posts/$argv[1].md

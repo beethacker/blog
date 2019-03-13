@@ -1,0 +1,8 @@
+#!/usr/bin/fish
+if [ -n $argv[1] ]
+  hugo new posts/$argv[1].md
+  vim content/posts/$argv[1].md
+else
+  echo "Required is the name of the post!"
+end
+
