@@ -10,7 +10,9 @@
   </head>
   <body>
     <h1 class="topbar">
+      {{ if eq .Type "posts" }}
       <span id="date"> {{ .Date.Format "January 2, 2006" }} </span> 
+      {{ end }}
       {{ .Title }}
     </h1>
     <div id="content">

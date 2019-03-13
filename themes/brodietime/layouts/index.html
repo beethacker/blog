@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-  {{ range first 10 .Data.Pages  }}
+  {{ range first 30 .Data.Pages  }}
   {{ if eq .Type "posts" }}
   <a style="display:block" class="entry" href = {{ .Permalink }}>
     <div class="entry">
