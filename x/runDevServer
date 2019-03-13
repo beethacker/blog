@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 if test -z (pgrep hugo)
-  hugo server -D -d dev &
+  hugo server -D -d dev --watch &
 else
   echo "Already running!"
 end

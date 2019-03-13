@@ -1,5 +1,5 @@
-{{ partial "header.html" }}
-  <h1> {{ .Title }} </h1>
-  <h2> {{ .Date.Format "January 2, 2006" }} </h2>
+{{ partial "header.html" . }}
+<div id="full_entry">
     {{ .Content }}
+</div> <!--full_entry -->
 {{ partial "footer.html" }}

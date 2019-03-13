@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head><title>{{ .Title }}</title></head>
+  <head>
+    <title>{{ .Title }}</title>
+    <link href="{{ .Site.BaseURL }}/css/brodietime_style.css" rel="stylesheet" type="text/css"/>
+    <link href="{{ .Site.BaseURL }}/js/prism.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Language styling -->
+    <script src="{{ .Site.BaseURL }}/js/prism.js"></script>
+  </head>
   <body>
-    ((HEADER))
- 
+    <h1 class="topbar">
+      <span id="date"> {{ .Date.Format "January 2, 2006" }} </span> 
+      {{ .Title }}
+    </h1>
+    <div id="content">
