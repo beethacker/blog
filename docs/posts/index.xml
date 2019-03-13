@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Brodie Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 17:23:50 -0300</lastBuildDate>
     
 	<atom:link href="http://brodie.cookwithchef.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog 2019</title>
+      <link>http://brodie.cookwithchef.com/posts/blog/blog_2019/</link>
+      <pubDate>Wed, 13 Mar 2019 17:23:50 -0300</pubDate>
+      
+      <guid>http://brodie.cookwithchef.com/posts/blog/blog_2019/</guid>
+      <description>Here We Go Again Just like last year, I&amp;rsquo;ve been getting that urge to start keep a blog again. This year, I&amp;rsquo;ve managed to clean up a few things with the process! I&amp;rsquo;ve switched to using Hugo to generate a static site. It&amp;rsquo;s a lot more full featured than my hacked together generator in C.
+Switching to Hugo means that I&amp;rsquo;ll have pagination without having to write it myself. It also means that I can switch to using markdown to write posts!</description>
+    </item>
     
     <item>
       <title>New Blog 2018</title>

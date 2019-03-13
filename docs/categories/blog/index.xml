@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web on Brodie Blog</title>
-    <link>http://brodie.cookwithchef.com/tags/web/</link>
-    <description>Recent content in Web on Brodie Blog</description>
+    <title>Blog on Brodie Blog</title>
+    <link>http://brodie.cookwithchef.com/categories/blog/</link>
+    <description>Recent content in Blog on Brodie Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Mar 2019 17:23:50 -0300</lastBuildDate>
     
-	<atom:link href="http://brodie.cookwithchef.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://brodie.cookwithchef.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>http://brodie.cookwithchef.com/posts/blog/blog_2019/</guid>
       <description>Here We Go Again Just like last year, I&amp;rsquo;ve been getting that urge to start keep a blog again. This year, I&amp;rsquo;ve managed to clean up a few things with the process! I&amp;rsquo;ve switched to using Hugo to generate a static site. It&amp;rsquo;s a lot more full featured than my hacked together generator in C.
 Switching to Hugo means that I&amp;rsquo;ll have pagination without having to write it myself. It also means that I can switch to using markdown to write posts!</description>
-    </item>
-    
-    <item>
-      <title>How Does This Work Again?</title>
-      <link>http://brodie.cookwithchef.com/posts/blog/forget/</link>
-      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://brodie.cookwithchef.com/posts/blog/forget/</guid>
-      <description>I haven&#39;t written anything for this blog in a while, so I forget how it was working. Maybe I should further document my process! It occurs to me that I have a few posts about this blog, but nothing seriously describing what it is or how it works! I also forget my password.  Entries are written in HTML with a few meta tags at the top. These can then be FTP&#39;d to the server.</description>
     </item>
     
   </channel>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://brodie.cookwithchef.com/posts/blog/blog_2019/</loc>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://brodie.cookwithchef.com/posts/blog/blog_2018/</loc>
     <lastmod>2018-02-20T00:00:00+00:00</lastmod>
   </url>
@@ -59,18 +64,25 @@
   
   <url>
     <loc>http://brodie.cookwithchef.com/tags/blog/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://brodie.cookwithchef.com/categories/blog/</loc>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://brodie.cookwithchef.com/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://brodie.cookwithchef.com/categories/</loc>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -100,7 +112,7 @@
   
   <url>
     <loc>http://brodie.cookwithchef.com/posts/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,13 +124,13 @@
   
   <url>
     <loc>http://brodie.cookwithchef.com/tags/</loc>
-    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://brodie.cookwithchef.com/tags/web/</loc>
-    <lastmod>2016-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-13T17:23:50-03:00</lastmod>
     <priority>0</priority>
   </url>
   
