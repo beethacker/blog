@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software on Brodie Blog</title>
-    <link>/tags/software/</link>
+    <link>brodie.cookwithchef.com/tags/software/</link>
     <description>Recent content in Software on Brodie Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/software/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="brodie.cookwithchef.com/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Blog 2018</title>
-      <link>/posts/blog/blog_2018/</link>
+      <link>brodie.cookwithchef.com/posts/blog/blog_2018/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/blog/blog_2018/</guid>
+      <guid>brodie.cookwithchef.com/posts/blog/blog_2018/</guid>
       <description>This week I&#39;ve been working on yet another new blog. It feels a little silly, since I never manage to keep up with writing entries, but maybe this time will be different. It&#39;s also a very small enjoyable project that I can finish and cross off the list. The current version feels pretty similar to last time, but the trick is that this time I&#39;m statically generating the pages offline in C++.</description>
     </item>
     
     <item>
       <title>Productivity Streak</title>
-      <link>/posts/apps/projects_feb_2018/</link>
+      <link>brodie.cookwithchef.com/posts/apps/projects_feb_2018/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/apps/projects_feb_2018/</guid>
+      <guid>brodie.cookwithchef.com/posts/apps/projects_feb_2018/</guid>
       <description>finished a bunch of tiny projects!&#34;/	I seem to be getting a whole lot done lately. I have a new blog system set up, and I&#39;ve made a few silly websites for Lauralee. I&#39;ve been playing with Android Studio and Unity! I&#39;ve also gotten in the routine of reading and doing yoga! Silly Websites  Webcomic Bubblegum Machine I made a website that dispenses comics for Lauralee.</description>
     </item>
     

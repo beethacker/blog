@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Brodie Blog</title>
-    <link>/tags/</link>
+    <link>brodie.cookwithchef.com/tags/</link>
     <description>Recent content in Tags on Brodie Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="brodie.cookwithchef.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>/tags/blog/</link>
+      <link>brodie.cookwithchef.com/tags/blog/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>brodie.cookwithchef.com/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ergodox</title>
-      <link>/tags/ergodox/</link>
+      <link>brodie.cookwithchef.com/tags/ergodox/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ergodox/</guid>
+      <guid>brodie.cookwithchef.com/tags/ergodox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Languages</title>
-      <link>/tags/languages/</link>
+      <link>brodie.cookwithchef.com/tags/languages/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>/tags/languages/</guid>
+      <guid>brodie.cookwithchef.com/tags/languages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Music</title>
-      <link>/tags/music/</link>
+      <link>brodie.cookwithchef.com/tags/music/</link>
       <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/music/</guid>
+      <guid>brodie.cookwithchef.com/tags/music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Musicprogramming</title>
-      <link>/tags/musicprogramming/</link>
+      <link>brodie.cookwithchef.com/tags/musicprogramming/</link>
       <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/musicprogramming/</guid>
+      <guid>brodie.cookwithchef.com/tags/musicprogramming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Software</title>
-      <link>/tags/software/</link>
+      <link>brodie.cookwithchef.com/tags/software/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/software/</guid>
+      <guid>brodie.cookwithchef.com/tags/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>/tags/web/</link>
+      <link>brodie.cookwithchef.com/tags/web/</link>
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/web/</guid>
+      <guid>brodie.cookwithchef.com/tags/web/</guid>
       <description></description>
     </item>
     
