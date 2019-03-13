@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Brodie Blog</title>
+    <link>/tags/web/</link>
+    <description>Recent content in Web on Brodie Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Does This Work Again?</title>
+      <link>/posts/blog/forget/</link>
+      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/blog/forget/</guid>
+      <description>I haven&#39;t written anything for this blog in a while, so I forget how it was working. Maybe I should further document my process! It occurs to me that I have a few posts about this blog, but nothing seriously describing what it is or how it works! I also forget my password.  Entries are written in HTML with a few meta tags at the top. These can then be FTP&#39;d to the server.</description>
+    </item>
+    
+  </channel>
+</rss>

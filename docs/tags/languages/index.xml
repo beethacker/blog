@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Languages on Brodie Blog</title>
+    <link>/tags/languages/</link>
+    <description>Recent content in Languages on Brodie Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/languages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Korean</title>
+      <link>/posts/korean/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/korean/</guid>
+      <description>Lauralee would like to go on a trip to Seoul sometime, and I was at Freeman&#39;s with Jess and Craig, and they were talking about a trip to visit Kyle sometime. I decided to start learning a bit of Korean now, and see how functional I can get it by then.I&#39;ve been at it for about a month now, and so far I feel like it&#39;s been my most efficient language learning venture so far!</description>
+    </item>
+    
+  </channel>
+</rss>

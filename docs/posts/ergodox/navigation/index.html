@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ergodox Navigation Layer</title>
+    <link href="//css/brodietime_style.css" rel="stylesheet" type="text/css"/>
+    <link href="//js/prism.css" rel="stylesheet" type="text/css"/>
+
+    
+    <script src="//js/prism.js"></script>
+  </head>
+  <body>
+    <h1 class="topbar">
+      
+      <span id="date"> April 27, 2016 </span> 
+      
+      Ergodox Navigation Layer
+    </h1>
+    <div id="content">
+
+<div id="full_entry">
+    <meta name="title" content="Ergodox Navigation Layer"/>
+<meta name="tags" content="ergodox"/>
+<meta name="description" content="I've added a navigation layer to my ergodox layout. It makes moving around and selecting text really nice, and so far has been an acceptable alternative to vim for me."/>
+<meta name="create_time" content="2016/04/27"/>
+
+<p>
+When I decided on the ergodox, it was mostly because I wanted a split keyboard that didn't have staggered rows. The fact that it was entirely programmable was
+a neat perk. Before the ergodox came, I spent a lot of time thinking about how I wanted to lay out the keys. I've done a lot of things that make sense to me, which I haven't seen in any other layouts that I've come across.
+</p>
+
+<p>
+In particular, I really like Vim keybindings, and wanted to see how close I could get to a vim experience just by adding a navigation layer. It turned out really well. I can very quickly navigate and select text, and though there are still a few Vim keybinds that I miss, for the most part I haven't looked back. Here is a look at my main layers.
+</p>
+
+<h2> Layer 0 - Colemak + Backspace </h2>
+<p>
+ I currently type on a colemak layout, which places ; to on QWERTY 'p'. Since I have an entire layer dedicated to symbols, I decided that I can get by without ; in the main layout. Also, as a programmer having to reach up for ; is a bit annoying with colemak, so I find it a lot nicer to be in its usual right pinky position, just on a symbol layer. I chose to move 'z' to ';', and replaced 'z' with a backspace. Backspace is now in the main layout, and it's magical!
+</p>
+<pre>
+,----------------------------------------------------.           ,----------------------------------------------------.
+|   -L0   |  1   |  2   | ~L3  |      |  5   |[Boot] |           |[Boot] |  6   |  7   |[menu]|  9   | ~L4  |  #Tab   |
+|---------+------+------+------+------+--------------|           |-------+------+------+------+------+------+---------|
+|   Tab   |  Q   |  W   |  F   |  P   |  G   |       |           | !Tab  |  J   |  L   |  U   |  Y   |  Z   |Capslock |
+|---------+------+------+------+------+------|       |           |       |------+------+------+------+------+---------|
+|  Ctrl   |  A   |  R   |  S   |  T   |  D   |-------|           |-------|  H   |  N   |  E   |  I   |  O   |  Ctrl   |
+|---------+------+------+------+------+------|  +L3  |           |       |------+------+------+------+------+---------|
+|  Shift  |Bk Sp |  X   |  C   |  V   |  B   |       |           |       |  K   |  M   |  ,   |  .   |  /   |  Shift  |
+`---------+------+------+------+------+--------------'           `--------------+------+------+------+------+---------'
+ |  Gui   | ^!   | #Tab | Alt  | Esc  |                                         |Enter | Alt  |[Menu]| ^!   | ^Shift |
+ `------------------------------------'                                         `------------------------------------'
+                                         ,-------------.       ,-------------.
+                                         |  F8  | +F7  |       | +F6  | ^F9  |
+                                  ,------|------|------|       |------+------+------.
+                                  |      |      | +F8  |       | ^F2  |      |      |
+                                  | ~L1  | Alt  |------|       |------| ~L2  |Space |
+                                  |      |      |  F9  |       |  +!  |      |      |
+                                  `--------------------'       `--------------------'
+</pre>
+
+<p>Layer 3 has a numpad on the right hand, so I've gradually been switching out the number row with various hotkeys. </p>
+
+<h2> Layer 1 - Symbol layer </h2>
+<p> I have a symbol layer activated by one of the thumb buttons. It has a lot of () {} [] in very friendly positions so it's quite comfortable to program on. This is pretty standard for an ergodox layout. I also have very similar layer for numbers.
+</p>
+<pre>
+,----------------------------------------------------.           ,----------------------------------------------------.
+|         |  F1  |  F2  |  F3  |  F4  |  F5  |[Boot] |           |[Boot] |  F6  |      |      |      |      |         |
+|---------+------+------+------+------+--------------|           |-------+------+------+------+------+------+---------|
+|         |  ^   |  %   |  /   |  \   |  |   |       |           | V.Up  |  `   |  @   |  {   |  }   |  :   |         |
+|---------+------+------+------+------+------|       |           |       |------+------+------+------+------+---------|
+|  Enter  |  -   |  +   |  *   |  =   |  ~   |-------|           |-------|  "   |  '   |  (   |  )   |  ;   |         |
+|---------+------+------+------+------+------|       |           |V.Down |------+------+------+------+------+---------|
+|         |Bk Sp |  <   |  >   |  &   |  #   |       |           |       |  _   |  !   |  [   |  ]   |  ?   |         |
+`---------+------+------+------+------+--------------'           `--------------+------+------+------+------+---------'
+ |        |      |      |      |      |                                         |Enter |      |      |      |        |
+ `------------------------------------'                                         `------------------------------------'
+                                         ,-------------.       ,-------------.
+                                         | +L5  | +L7  |       |      |      |
+                                  ,------|------|------|       |------+------+------.
+                                  |      |      | +L6  |       |      |      |      |
+                                  |      |      |------|       |------| +L2  |Space |
+                                  |      |      |      |       |      |      |      |
+                                  `--------------------'       `--------------------'
+</pre>
+
+<h2> Layer 2 - Navigation Layer </h2>
+<p>
+While not a Vim user often, I am a very big fan of vim keybinds. Depending on the IDE I'm using at the time (IntelliJ currently) I have better or worse key bindings. Instead, I've tried to recreate what I can of a vim feel, by giving myself a navigation layer in my ergodox layout.
+</p>
+<p>
+I do really miss some of the power of vim, but all in all, it makes navigation and editing
+reasonably nice accross all applications.
+</p>
+<pre>
+,----------------------------------------------------.           ,----------------------------------------------------.
+|   -L0   |      |      |      |      |      |[Boot] |           |[Boot] |      |      |      |      |      |         |
+|---------+------+------+------+------+--------------|           |-------+------+------+------+------+------+---------|
+|   Tab   |      | Home |  Up  | End  |  !W  |       |           | ^F11  |      | #Up  |[mntr]|      |      |         |
+|---------+------+------+------+------+------|       |           |       |------+------+------+------+------+---------|
+|         |      | Left | Down |Right |  ^W  |-------|           |-------|  ^Z  |Shift | Ctrl | Alt  |  ^;  |   !F4   |
+|---------+------+------+------+------+------|       |           | +F11  |------+------+------+------+------+---------|
+|         |      |  ^X  |  ^C  |  ^V  |      |       |           |       |      | #!   | ^#W  |      |      |         |
+`---------+------+------+------+------+--------------'           `--------------+------+------+------+------+---------'
+ |        |      |      |      |      |                                         |      |      |      |      |        |
+ `------------------------------------'                                         `------------------------------------'
+                                         ,-------------.       ,-------------.
+                                         | -L2  |      |       |      |      |
+                                  ,------|------|------|       |------+------+------.
+                                  |      |      |      |       |      |      |      |
+                                  |      |      |------|       |------| ~L2  |      |
+                                  |      |      |      |       |      |      |      |
+                                  `--------------------'       `--------------------'
+</pre>
+<p>
+Holding the right thumb accesses the navigation layer. If I'm currently in the symbol layer (hollding left thumb), then right thumb pushes the layer rather than toggling it. So, both thumbs will lock the navigation layer
+</p>
+<p>
+This gives me arrows under my right hand, as well as Home and End. Right hand home row becomes shift, ctrl, alt, so that when I use the left hand arrows I can be holding shift or control shift to quickly navigate by words and select by words. I also have home and end, so selecting text to the beginning or the end of the line is very easy as well.
+</p>
+
+<p> I've recently added a number of hotkeys for dealing with windows. I'm using VirtuaWin at the moment. I use ctrl+alt+arrows to move about desktops. That's a lot of buttons, but they're all right under my fingers in home row in the navigation layer! </p>
+
+<p> The lower letter row has two keys so far
+<ul>
+<li> #!  (windows key + alt)  This plus an arrow is used to move windows to other desktops. </li>
+<li> ^#W (windows key + ctrl + W)  This pops up VirtuaWin's window selector </li>
+</ul>
+<p>
+My upper letter row has two hotkeys: maximize window and move window to other monitor.
+</p>
+
+<p> A few other cool keybindings that have made their way their way onto this layer:  </p>
+<ul>
+<li>Bottom row of the left will become cut, copy, and paste, in the usual x,c,v key positions.</li>
+<li> !W  (alt + w) switches between panels in Sublime Text </li>
+<li> ^W  (ctrl + w) grows the current selection in Sublime Text </li>
+<li> ^Z  (undo) is on the right hand.
+<li> +F11 and ^F11  (shift + F11 and ctrl + F11) These are bound to set and goto bookmarks in sublime and intellij. This gets me close to the behaviour of m (mark) and ' (go to mark) in vim.</li>
+</ul>
+
+</div> 
+</div> 
+</body>
+</html>
+

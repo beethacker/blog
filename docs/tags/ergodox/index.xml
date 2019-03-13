@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ergodox on Brodie Blog</title>
+    <link>/tags/ergodox/</link>
+    <description>Recent content in Ergodox on Brodie Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ergodox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ergodox Navigation Layer</title>
+      <link>/posts/ergodox/navigation/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/ergodox/navigation/</guid>
+      <description>When I decided on the ergodox, it was mostly because I wanted a split keyboard that didn&#39;t have staggered rows. The fact that it was entirely programmable wasa neat perk. Before the ergodox came, I spent a lot of time thinking about how I wanted to lay out the keys. I&#39;ve done a lot of things that make sense to me, which I haven&#39;t seen in any other layouts that I&#39;ve come across.</description>
+    </item>
+    
+    <item>
+      <title>Configuring my Ergodox Using Python</title>
+      <link>/posts/ergodox/python_config/</link>
+      <pubDate>Fri, 24 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/ergodox/python_config/</guid>
+      <description>Setting up the build for the ergodox firmware went pretty smoothly. I couldn&#39;t get the Teensy loader application to work with my ergodox onlinux, but on windows everything went smoothly. The online configurator tool didn&#39;t quite suit my needs. I wanted to add keys that wereCTRL+key, SHIFT+key, and so on, which weren&#39;t supported with massdrop&#39;s toolModifying the code for the layout in C was ugly and error prone.</description>
+    </item>
+    
+    <item>
+      <title>The Slippery Slope to Ergonomics</title>
+      <link>/posts/ergodox/getting_an_ergodox/</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/ergodox/getting_an_ergodox/</guid>
+      <description>A couple of months ago, I decided that I would consider buying an ergonomic keyboard. The next week, I noticed a Facebook post about a synth instrument on Kickstarter. This got me to thinking about using regular computer keyboards for playing synth. It&#39;s certainly never been a satisfying experience any time that I&#39;ve tried it. Though,what if a keyboard didn&#39;t have staggered rows? What if the keys were all layed out in a grid?</description>
+    </item>
+    
+  </channel>
+</rss>

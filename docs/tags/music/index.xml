@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Brodie Blog</title>
+    <link>/tags/music/</link>
+    <description>Recent content in Music on Brodie Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Ear Training Regime</title>
+      <link>/posts/apps/owl/</link>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/apps/owl/</guid>
+      <description>At the beginning of the year, I had a really bad ear. I found it difficult if not impossible to learn to play things by ear. Any ear training that I&#39;d ever attempted felt difficult or fruitless. Now, I&#39;ve written software to generate music flash cards for myself, which I&#39;ve dubbed &#39;Owl&#39;, and have embarked on a new ear training regime. So far it feels incredibly enjoyable and productive!  Motivation  When learning a language one school of thought is to, rather than relying on learning list of grammar rules, is to just learn a lot of sentences.</description>
+    </item>
+    
+  </channel>
+</rss>
