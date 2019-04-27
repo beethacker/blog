@@ -4,12 +4,13 @@ html {
 
 body {
 	background: white;
-	margin: 2%;
+	margin: 0 auto;
 	border-color: black;
 	border-style: solid;
 	border-width: 3px;
 	border-radius: 2px;
         max-width: 1200px;
+
 }
 
 .topbar {
