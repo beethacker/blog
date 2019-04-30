@@ -46,13 +46,13 @@ This file was grabbed from an older project. It mostly just renames some types
 and provides a few generic things - min, max, etc.
 
 {{< code >}}
-#include <stddef.h>
-#include <limits.h>
-#include <float.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <memory.h>
-#include <stdint.h>
+#include &ltstddef.h&gt
+#include &ltlimits.h&gt
+#include &ltfloat.h&gt
+#include &ltstdio.h&gt
+#include &ltstdarg.h&gt
+#include &ltmemory.h&gt
+#include &ltstdint.h&gt
 typedef int8_t s8;
 typedef int16_t s16;
 typedef int32_t s32;
@@ -225,10 +225,12 @@ The following code sets up DirectSound. It's a ton of ugly boiler plate. It does
 * Makes a copy of some audio format variables, as specified in application_main.cpp
 * Fills out a WAVEFORMATEX struct with this information, so we can request that format
 from DirectSound.
-* Loads the DirectSound dll
+* Loads the dll containing the DirectSound library
 * Creates a DirectSound object
-* Creates a Primary Buffer and sets its audio format. This is where the speakers will grab audio from DirectSound? I think...
-* Creates a Secondary Buffer. This is where we write audio so DirectSound can use it.
+* Creates a Primary Buffer and sets its audio format. We can't touch this one, but I hear in the old days we could. 
+This is where audio data gets communicated from DirectSound to our audio hardware. 
+* Creates a Secondary Buffer. This is where we write audio so DirectSound can use it. We can have a few of these and DirectSound will 
+mix them into the Primary Buffer. We'll do all our own mixing though, so we'll only ever have one of these.
 * If anything goes wrong, we fire up a message box and quit the program.
 
 {{< code >}}
@@ -241,15 +243,17 @@ struct win32_sound_system
 
   u32 BufferSizeInBytes;
 
+  //NOTE Redundant, but convenient
+  u32 BytesPerSecond;
+  u32 NumChannels;
+
+  //Track other quantities so we know where
+  //and how many samples to write.
   u32 NumSamplesPlayed;
   u32 NumSamplesWritten;
 
   u32 LastPlayCursor;
   u32 SafeWriteCursor;
-
-  //NOTE Redundant, but convenient
-  u32 BytesPerSecond;
-  u32 NumChannels;
 
   //Handles to direct sound
   HMODULE DirectSoundLibrary;
@@ -348,17 +352,33 @@ Win32InitSoundSystem(HWND WindowHandle, win32_sound_system *SoundSystem, applica
 
 The main loop calls Win32FillSoundBuffer to generate about a frames worth of
 samples and fill them into a DirectSound buffer. The DirectSound buffer is a
-ring buffer.
-
-xxxx
+ring buffer - it will play audio from a buffer, and when it gets to the end,
+it will loop and keep playing from the beginning.
 
 We can ask DirectSound for where it's play cursor currently is, as well as
-a write cursor. The goal is to stay ahead of the write cursor, otherwise we
-won't be able to lock the buffer and write our data. We're also going to need
-our own cursor to keep track of where in the buffer we should be writing to.
-This is win32_sound_system.SafeCursor. We want to keep it a "safe" distance
-ahead of DirectSound's write cursor.
+a write cursor. The goal is to keep filling the buffer, staying ahead of the write cursor. Otherwise the 
+section between the play cursor and write cursor is locked for playback, so we won't be able to write the
+new samples, and we'll be stuck playing old data. 
 
+((Diagram?))
+
+We're also going to need
+our own cursor to keep track of where in the buffer we're currently writing to. We store this in
+win32_sound_system.SafeCursor. We want to keep it a "safe" distance ahead of DirectSound's write cursor.
+Since we're not reacting to input or anything (yet, at least), we can afford to stay a really generous distance ahead.
+
+Each time through the program's main loop,
+* Get the DirectSound PlayCursor and WriteCursor, note how many samples the WriteCursor is ahead of the PlayCursor (LatencySamples)
+* Compare the position of PlayCursor to its position last time through the loop, this tells us how many samples have been played!
+* Decide how many samples we want to write. Currently, we write enough samples so our "SafeCursor" is one frame + 2*LatencySamples 
+ahead of the play cursor
+
+((Diagram?))
+
+* Lock the corresponing part of the DirectSound buffer. 
+* Ask the main application UpdateAudio function to fill samples into this buffer.
+* Since we're writing into a ring buffer, we might be writing past the end of the buffer and back into the start of the buffer, 
+so DirectSound will sometimes give us *two* regions of memory to fill samples into.
 
 
 {{< code >}}
@@ -430,7 +450,8 @@ Win32FillSoundBuffer(win32_sound_system* SoundSystem, application_audio* AppAudi
 
 {{</ code >}}
 
-*Win32PreloadBuffer* is nearly the same as Win32FillSoundBuffer. Maybe it's possible to combine them, but if all goes well, I'll never have to come back down into this level of the code. * Fingers crossed! *
+And that's mostly it! *Win32PreloadBuffer* is nearly the same as Win32FillSoundBuffer. The only difference is that it fills in data before we start DirectSound playing, so
+it fills in a much larger chunk and doesn't have to worry about any regions of the buffer being locked for playback. Maybe I don't need a separate function for this, but if all goes well, I'll never have to come back down into this level of the code anyway. * Fingers crossed! *
 
 
 
