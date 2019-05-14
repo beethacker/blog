@@ -7,28 +7,57 @@ Categories: [RoBoMa]
 draft: true
 ---
 
-My new music programming project is to play Camille Saint Saens' The
-Swan as beautifully as I can... by writing C++ code! As a point of reference, here's Yo-Yo Ma playing it!
+After going away for a weekend and seeing a live string quartet, I came home feeling pretty inspired and ready to jump
+into a new music programming project. The goal is to play Camille Saint Saens' The
+Swan as beautifully as I can by writing C++ code! As a point of reference, here's Yo-Yo Ma playing it!
 
-(yoyoma.mp3)
+{{% includeMP3 "yoyoma1.mp3" %}}
 
-[Last time] (/posts/RoBoMa/swan0.html) I set up a new project with the
-bare basics to play audio or export audio to a wave file. This week,
-let's actually play some music!
+[Last time] (/posts/roboma/swan0) I set up a new C++ project with the
+bare basics to play some audio and export wave files. Let's actually play some music!
+Rather than a sine wave or square wave like last time, we're going to start with a sawtooth wave instead. 
 
-Rather than a sine wave or square wave like last time, we're going to start with a sawtooth wave instead.
+{{% figure src="/img/sawtooth.png" %}}
+{{% includeMP3 "sawTone.mp3" %}}
+{{% includeMP3 "sawScale.mp3" %}}
 
-(diagram)
+This doesn't sound a lot like a cello. It'll be nice to try to get a nicer richer sounding instrument,
+but for now it'll have to do. There's a lot of really great sound tracks in old video games! Good music
+can be made with synthesizers using simple tones like this! 
 
-This doesn't sound a lot like a cello, but certainly a lot closer than a sine or square wave. Also, since last time, I've coded it up so I can give it a list of notes and durations to play.
+Now that I have things coded up so that I can play multiple piches in a row, 
+that's really all we need to *really* **really** badly play a song. 
 
-(scale)
+{{< code >}}
+  SetBPM(Player, QUARTER, 80);
 
-And with that, that's all we need to *really* **really** badly play a song. Here's the first phrase of The Swan.
+  f32 BeatTime = 0.0;
+  SequenceNote(Player, MIDI_G4, QUARTER, &BeatTime);
+  SequenceNote(Player, MIDI_Fs4, QUARTER, &BeatTime);
+  SequenceNote(Player, MIDI_B3, QUARTER, &BeatTime);
+  SequenceNote(Player, MIDI_E4, QUARTER, &BeatTime);
+  SequenceNote(Player, MIDI_D4, QUARTER, &BeatTime);
+  SequenceNote(Player, MIDI_G3, QUARTER, &BeatTime);
 
-(code)
+  SequenceNote(Player, MIDI_A3, HALF + EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_B3, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_C4, HALF, &BeatTime);
+  SequenceNote(Player, REST, QUARTER, &BeatTime);
 
-(swan.ogg)
+  SequenceNote(Player, MIDI_E3, HALF, &BeatTime);
+  SequenceNote(Player, MIDI_Fs3, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_G3, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_A3, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_B3, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_C4, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_D4, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_E4, EIGHTH, &BeatTime);
+  SequenceNote(Player, MIDI_Fs4, EIGHTH, &BeatTime);
+
+  SequenceNote(Player, MIDI_B4, HALF + QUARTER + EIGHTH, &BeatTime);
+{{</ code >}}
+
+{{% includeMP3 "swan01.mp3" %}}
 
 Okay, not great, but it's a start! There's so much that can be done to
 improve this. Each post I'll try to add some new feature and get a better sounding version of the piece. There are a few broad categories of things to work on:
