@@ -21,9 +21,9 @@ This is a note played on a piano. If we zoom in, we see a repeating wave form.
 ((piano note zoomed))
 
 Zoomed out though, we can see how the amplitude of the waves change over the course of the 
-note. It starts
+note. It starts at 0 volume, then quickly becomes its loudest before fading out.
 
-In constrast, here is our
+In constrast, here is our generated tone.
 
 ((tone note))
 
